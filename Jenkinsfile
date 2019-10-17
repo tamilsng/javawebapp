@@ -11,8 +11,6 @@ node{
          sh "mvn test surefire-report:report"
       } 
       stage ('Deploy War files'){
-            sshagent(['Docker']){
-            sh " scp -o StrictHostKeyChecking=no target/*.war ansadmin@13.233.133.243:/opt/docker"
-            }
+           sh "scp -r target/*war 13.233.133.243:/opt/docker"
       }
  }
