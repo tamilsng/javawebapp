@@ -8,6 +8,6 @@ node{
         sh "mvn clean package -Dmaven.test.skip=true"
       }
      stage ('Test-JUnit'){
-         sh "'mvn test surefire-report:report"
+         sh "mvn test surefire-report:report"
       }   
  }
