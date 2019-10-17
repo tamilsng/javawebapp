@@ -11,6 +11,6 @@ node{
          sh "mvn test surefire-report:report"
       } 
       stage ('Deploy War files'){
-            sh " scp -r target/*.war 13.233.133.243:/opt/docker"
+            sh " scp -r StrictHostKeyChecking=no target/*.war 13.233.133.243:/opt/docker"
       }
  }
